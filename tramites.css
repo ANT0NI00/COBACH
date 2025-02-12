@@ -1,0 +1,183 @@
+/* Estilos para la página de Trámites */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #002b45;
+    padding: 10px;
+    color: white;
+}
+
+.menu-container {
+    position: relative;
+}
+
+.menu-toggle {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu a:hover,
+.menu a.active {
+    color: #00aaff;
+}
+
+.logo-container img {
+    height: 50px;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.tramites {
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.tramites h2 {
+    font-size: 2rem;
+    color: #002b45;
+}
+
+.tramites p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.lista-tramites {
+    padding: 20px;
+    background-color: #e9ecef;
+    margin-top: 30px;
+}
+
+.lista-tramites h3 {
+    font-size: 1.5rem;
+    color: #002b45;
+}
+
+.lista-tramites ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-tramites li {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.lista-tramites h4 {
+    font-size: 1.2rem;
+    color: #002b45;
+}
+
+.lista-tramites p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.lista-tramites a {
+    font-size: 1rem;
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.lista-tramites a:hover {
+    text-decoration: underline;
+}
+
+.formulario-tramites {
+    padding: 20px;
+    background-color: #e9ecef;
+    margin-top: 30px;
+}
+
+.formulario-tramites h3 {
+    font-size: 1.5rem;
+    color: #002b45;
+}
+
+.formulario-tramites form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.formulario-tramites input,
+.formulario-tramites select,
+.formulario-tramites textarea,
+.formulario-tramites button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario-tramites button {
+    background-color: #002b45;
+    color: white;
+    cursor: pointer;
+}
+
+.formulario-tramites button:hover {
+    background-color: #00aaff;
+}
+
+footer {
+    text-align: center;
+    background-color: #002b45;
+    color: white;
+    padding: 10px;
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #002b45;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .formulario-tramites form {
+        width: 90%;
+    }
+}

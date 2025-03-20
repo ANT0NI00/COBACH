@@ -1,4 +1,4 @@
-/* Estilos generales */
+
 * {
     margin: 0;
     padding: 0;
@@ -17,19 +17,6 @@ a {
     color: inherit;
 }
 
-/* Menú de navegación */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #003366;
-    padding: 20px 25px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease-in-out;
-}
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -64,30 +51,34 @@ a {
     color: #00aaff;
 }
 
-/* Logo */
 .logo-container img {
-    width: 60px;
+    height: 50px;
+}
+
+.banner img {
+    width: 100%;
     height: auto;
 }
 
-/* Banner */
+
 .banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    height: 500px;
-    margin: 0 auto;
+    width: 100%;
+    height: auto;
     overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .banner img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: scale-down;
 }
+
+
+.logo-container img {
+    width: 100px;
+    height: 100%;
+}
+
 
 /* Carrusel */
 .carrusel {
@@ -111,10 +102,10 @@ a {
     width: 100%;
     max-height: 400px;
     object-fit: cover;
-    border-radius: 12px;
+    /* border-radius: 12px; */
 }
 
-/* Flechas de navegación */
+/* Flechitas*/
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -133,7 +124,11 @@ a {
     background: #003366;
 }
 
-/* Sección Historia */
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/*historia*/
+
 .historia {
     padding: 40px;
     text-align: center;
@@ -156,7 +151,7 @@ a {
     line-height: 1.8;
 }
 
-/* Anuncios */
+
 .anuncios {
     text-align: center;
     padding: 30px;
@@ -166,7 +161,7 @@ a {
     border-radius: 12px;
 }
 
-/* Galería */
+
 .galeria {
     display: flex;
     justify-content: center;
@@ -188,8 +183,7 @@ a {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* Mapa */
-/* Mapa */
+
 .ubicacion {
     text-align: center;
     padding: 40px;
@@ -199,8 +193,8 @@ a {
 }
 
 .ubicacion iframe {
-    width: 100%;
-    height: 600px;  /* Aumentar la altura */
+    width: 70%;
+    height: 600px;  
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -211,7 +205,7 @@ a {
 }
 
 
-/* Estilos de la caja de contacto */
+
 .contacto {
     background: linear-gradient(135deg, #3498db, #2c3e50);
     color: white;
@@ -254,14 +248,14 @@ a {
     margin-right: 15px;
 }
 
-/* Responsividad */
+
 @media (max-width: 1024px) {
     .navbar {
         padding: 18px 22px;
     }
 
     .menu {
-        gap: 20px;
+        gap: 10px;
     }
 
     .menu a {
@@ -275,21 +269,19 @@ a {
 }
 
 @media (max-width: 768px) {
-    /* Menú */
+
+
+
     .menu {
         display: none;
         flex-direction: column;
-        background-color: #003366;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        z-index: 999;
+        align-items: flex-start;
+        gap: 10px;
     }
 
     .menu-toggle {
         display: block;
+        font-size: 1.5rem;
         cursor: pointer;
     }
 
@@ -303,12 +295,6 @@ a {
         display: block;
     }
 
-    /* Carrusel */
-    .carrusel-container {
-        display: block;
-    }
-
-    /* Anuncios */
     .galeria {
         flex-direction: column;
     }
@@ -319,7 +305,6 @@ a {
         margin: 10px auto;
     }
 
-    /* Historia */
     .historia {
         padding: 20px;
         font-size: 1rem;
@@ -332,8 +317,8 @@ a {
     }
 
     .contacto, .ubicacion iframe {
-        width: 100%;
-        max-width: 450px;
+        width: auto;
+        max-width: 300px;
     }
 
     .banner {
@@ -341,17 +326,36 @@ a {
     }
 }
 
-/* Menú  */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
     .menu {
         display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
 
-    .menu.show {
+    .menu-toggle {
         display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .menu-container.active .menu {
+        display: flex;
+    }
+
+    .mision-vision {
+        flex-direction: column;
+    }
+    
+}
+@media (max-width: 768px) {
+    .carrusel-container {
+        flex-wrap: nowrap;
+    }
+
+    .slide {
+        min-width: fit-content; /* Ocupa todo el ancho */
+        min-height: min-content;
     }
 }
